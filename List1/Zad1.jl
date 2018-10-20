@@ -11,6 +11,7 @@ end
 
 println("Float16: ", macheps16, ", eps(Float16): ", eps(Float16))
 
+
 macheps32 = Float32(1)
 
 while Float32(1) + Float32(macheps32 / 2) > Float32(1)
@@ -19,6 +20,7 @@ end
 
 println("Float32: ", macheps32, ", eps(Float32): ", eps(Float32))
 
+
 macheps64 = Float64(1)
 
 while Float64(1) + Float64(macheps64 / 2) > Float64(1)
@@ -26,6 +28,7 @@ while Float64(1) + Float64(macheps64 / 2) > Float64(1)
 end
 
 println("Float64: ", macheps64, ", eps(Float64): ", eps(Float64))
+
 
 #Czesc 2 zadania
 println("Czesc 2 - eta")
@@ -38,6 +41,7 @@ end
 
 println("Float16: ", eta16, ", nextfloat(Float16(0): ", nextfloat(Float16(0)))
 
+
 eta32 = Float32(1)
 
 while Float32(eta32 / 2) > Float32(0)
@@ -46,6 +50,7 @@ end
 
 println("Float32: ", eta32, ", nextfloat(Float32(0): ", nextfloat(Float32(0)))
 
+
 eta64 = Float64(1)
 
 while Float64(eta64 / 2) > Float64(0)
@@ -53,6 +58,7 @@ while Float64(eta64 / 2) > Float64(0)
 end
 
 println("Float64: ", eta64, ", nextfloat(Float64(0): ", nextfloat(Float64(0)))
+
 
 #Czesc 3 zadania
 println("Czesc 3 - MAX")
@@ -72,6 +78,7 @@ end
 
 println("Float16: ", Float16(max16), ", realmax(FLoat16): ", realmax(Float16))
 
+
 max32 = Float32(1)
 
 while isinf(Float32(max32 * 2)) == false
@@ -86,6 +93,7 @@ while isinf(Float32(max32 + tmp32)) == false
 end
 
 println("Float32: ", max32, ", realmax(Float32): ", realmax(Float32))
+
 
 max64 = Float64(1)
 

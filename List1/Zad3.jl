@@ -8,6 +8,7 @@ end
 
 println(k - 1)
 
+
 k = Float64(0)
 a = Float64(2)
 while Float64(a) != Float64(a + 2.0^-k)
@@ -15,6 +16,7 @@ while Float64(a) != Float64(a + 2.0^-k)
 end
 
 println(k - 1)
+
 
 k = Float64(0)
 a = Float64(0.5)

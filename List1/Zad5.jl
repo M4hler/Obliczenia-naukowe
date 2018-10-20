@@ -1,5 +1,6 @@
 #Oskar Makowski 236554
 
+exact = Float32(-1.00657107e-10)
 x = [Float32(2.718281828), Float32(-3.141592654), Float32(1.414213562), Float32(0.5772156649), Float32(0.3010299957)]
 y = [Float32(1486.2497), Float32(878366.9879), Float32(-22.37492), Float32(4773714.647), Float32(0.000185048)]
 
@@ -10,7 +11,8 @@ for i = 1:5
 	S += Float32(x[i] * y[i])
 end
 
-println(S)
+difference = Float32(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #b
 S = Float32(0)
@@ -18,7 +20,8 @@ for i = 5:-1:1
 	S += Float32(x[i] * y[i])
 end
 
-println(S)
+difference = Float32(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #c
 z = [Float32(0), Float32(0), Float32(0), Float32(0), Float32(0)]
@@ -27,7 +30,7 @@ for i = 1:5
 	z[i] = Float32(x[i] * y[i])
 end
 
-sort(z, rev = true)
+z = sort(z, rev = true)
 
 Spositive = Float32(0)
 Snegative = Float32(0)
@@ -41,7 +44,8 @@ end
 
 S = Float32(Spositive + Snegative)
 
-println(S)
+difference = Float32(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #d
 z = [Float32(0), Float32(0), Float32(0), Float32(0), Float32(0)]
@@ -50,7 +54,7 @@ for i = 1:5
 	z[i] = Float32(x[i] * y[i])
 end
 
-sort(z)
+z = sort(z)
 
 Spositive = Float32(0)
 Snegative = Float32(0)
@@ -64,8 +68,11 @@ end
 
 S = Float32(Spositive + Snegative)
 
-println(S)
+difference = Float32(abs(S - exact))
+println(S, " roznica: ", difference)
 
+
+exact = Float64(-1.00657107e-10)
 x = [Float64(2.718281828), Float64(-3.141592654), Float64(1.414213562), Float64(0.5772156649), Float64(0.3010299957)]
 y = [Float64(1486.2497), Float64(878366.9879), Float64(-22.37492), Float64(4773714.647), Float64(0.000185048)]
 
@@ -76,7 +83,8 @@ for i = 1:5
 	S += Float64(x[i] * y[i])
 end
 
-println(S)
+difference = Float64(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #b
 S = Float64(0)
@@ -84,7 +92,8 @@ for i = 5:-1:1
 	S += Float64(x[i] * y[i])
 end
 
-println(S)
+difference = Float64(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #c
 z = [Float64(0), Float64(0), Float64(0), Float64(0), Float64(0)]
@@ -93,7 +102,7 @@ for i = 1:5
 	z[i] = Float32(x[i] * y[i])
 end
 
-sort(z, rev = true)
+z = sort(z, rev = true)
 
 Spositive = Float64(0)
 Snegative = Float64(0)
@@ -107,7 +116,8 @@ end
 
 S = Float64(Spositive + Snegative)
 
-println(S)
+difference = Float64(abs(S - exact))
+println(S, " roznica: ", difference)
 
 #d
 z = [Float64(0), Float64(0), Float64(0), Float64(0), Float64(0)]
@@ -116,7 +126,7 @@ for i = 1:5
 	z[i] = Float64(x[i] * y[i])
 end
 
-sort(z)
+z = sort(z)
 
 Spositive = Float64(0)
 Snegative = Float64(0)
@@ -130,4 +140,5 @@ end
 
 S = Float64(Spositive + Snegative)
 
-println(S)
+difference = Float64(abs(S - exact))
+println(S, " roznica: ", difference)
